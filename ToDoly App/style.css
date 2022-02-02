@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: maroon;
+    color: whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 50px;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input, form button {
+    padding: 8px;
+    font-size: 30px;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: maroon;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: maroon;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 8px;
+    background: white;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, .complete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.complete-btn {
+    background: green;
+}
+
+.todo-item {
+    padding: 0px 8px;
+}
+
+.fa-check, .fa-trash {
+    pointer-events: none;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(128px) rotateZ(15deg);
+    opacity: 0;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+}
+
+.select {
+    margin: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: maroon;
+    width: 160px;
+    cursor: pointer;
+    padding: 16px;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: maroon;
+    top: 0px;
+    right: 0px;
+    padding: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: maroon;
+}
